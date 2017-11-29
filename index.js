@@ -1,16 +1,15 @@
-var express = require('express');
+const express = require('express');
 
 // Constants
-var DEFAULT_PORT = 8080;
-var DEFAULT_WHO = "World";
-var PORT = process.env.PORT || DEFAULT_PORT;
-var WHO = process.env.WHO || DEFAULT_WHO;
+const DEFAULT_PORT = 8080;
+const DEFAULT_WHO = "World";
+const PORT = process.env.PORT || DEFAULT_PORT;
+const WHO = process.env.WHO || DEFAULT_WHO;
 
 // App
-var app = express();
+const app = express();
 app.get('/', function (req, res) {
   res.send('Hello ' + WHO + '. Wish you were here.\n');
 });
 
-app.listen(PORT)
-console.log('Running on http://localhost:' + PORT);
+app.listen(PORT, () => console.log('Running on http://localhost:' + PORT));
