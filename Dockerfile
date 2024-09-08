@@ -8,8 +8,8 @@ LABEL "rating"="Five Stars" "class"="First Class"
 
 USER root
 
-ENV AP /data/app
-ENV SCPATH /etc/supervisor/conf.d
+ENV AP=/data/app
+ENV SCPATH=/etc/supervisor/conf.d
 
 RUN apt-get -y update
 
